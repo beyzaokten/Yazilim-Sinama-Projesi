@@ -1,9 +1,9 @@
-<!-- musteriGiris.ejs -->
+<!-- isArayanGiris.ejs -->
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Müşteri Giriş Ekranı</title>
+    <title>İş Arayan Giriş Ekranı</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
         }
 
         .container {
-            background-color: #f3f3f3;
+            background-color:#f3f3f3;
             padding: 100px;
             border-radius: 20px;
             box-shadow: 0 2px 5px rgb(0, 0, 0);
@@ -31,7 +31,7 @@
             text-decoration: none;
             color: #007bff;
             border-radius: 50%;
-            margin-top: 10px;
+            margin-top:10px;
             padding: 10px 10px;
         }
 
@@ -63,27 +63,19 @@
             border-radius: 5px;
             margin: 0 auto;
             display: block;
-            margin-top: 10px;
+            margin-top:10px;
             box-shadow: 0 2px 5px rgb(0, 0, 0);
         }
 
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
-
-        .back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Müşteri Kayıt Ekranı</h2>
-        <form action="/musteriSubmit" method="post">
+        <h2>İş Arayan Kayıt Ekranı</h2>
+        <form action="/isArayanSubmit" method="post">
             <label for="isim">Ad:</label>
             <input type="text" id="isim" name="isim" required>
             
@@ -107,16 +99,13 @@
                 <option value="İsviçre">İsviçre</option>
                 <!-- Diğer ülke seçeneklerini ekleyebilirsiniz -->
             </select>
-            <a href="/anaGiris" class="back-button">Geri Dön</a>
+            <a href="/" class="back-button">Geri Dön</a>
+            
             <input type="submit" value="Kayıt ol">
         </form>
     </div>
     <script>
-        var kayitButonu = document.querySelector("#kayitButonu");
-        kayitButonu.addEventListener("click", function () {
-            // Buraya JavaScript kodu ekleyebilirsiniz.
-        });
+       
     </script>
 </body>
 </html>
-
