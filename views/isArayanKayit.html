@@ -1,0 +1,114 @@
+<!-- isArayanGiris.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>İş Arayan Giriş Ekranı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            background-color:#f3f3f3;
+            padding: 100px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+            max-width: 200px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: #007bff;
+            border-radius: 50%;
+            margin-top:10px;
+            padding: 10px 10px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 auto;
+            display: block;
+            margin-top:10px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>İş Arayan Kayıt Ekranı</h2>
+        <form action="/isArayanSubmit" method="post">
+            <label for="isim">Ad:</label>
+            <input type="text" id="isim" name="isim" required>
+            
+            <label for="soyisim">Soyad:</label>
+            <input type="text" id="soyisim" name="soyisim" required>
+            
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="sifre">Şifre:</label>
+            <input type="password" id="sifre" name="sifre" required>
+            
+            <label for="ulke">Ülke:</label>
+            <select id="ulke" name="ulke" required>
+                <option value="ABD">ABD</option>
+                <option value="Almanya">Almanya</option>
+                <option value="Türkiye">Türkiye</option>
+                <option value="İtalya">İtalya</option>
+                <option value="İspanya">İspanya</option>
+                <option value="Kanada">Kanada</option>
+                <option value="İsviçre">İsviçre</option>
+                <!-- Diğer ülke seçeneklerini ekleyebilirsiniz -->
+            </select>
+            <a href="/anaGiris" class="back-button">Geri Dön</a>
+            
+            <input type="submit" value="Kayıt ol">
+        </form>
+    </div>
+    <script>
+        var geriButonu = document.querySelector(".back-button");
+        geriButonu.addEventListener("click", function () {
+            window.location.href = "/anaGiris";
+        });
+    </script>
+</body>
+</html>

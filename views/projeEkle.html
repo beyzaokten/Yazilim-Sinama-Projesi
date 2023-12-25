@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İş Tanımlama Modülü</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="projectForm">
+        <h2>İş Tanımlama Modülü</h2>
+
+        <label for="projectTitle">Proje Başlığı:</label>
+        <input type="text" id="projectTitle" name="projectTitle" required>
+
+        <label for="projectDescription">Proje Açıklaması:</label>
+        <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+
+        <label for="projectBudget">Proje Bütçesi:</label>
+        <input type="number" id="projectBudget" name="projectBudget" required>
+
+        <label for="projectTime">Proje Tarihi:</label>
+        <input type="datetime-local" id="projectTime" name="projectTime" required>
+
+        <button type="button" onclick="saveProject()">Proje Kaydet</button>
+    </form>
+
+    <script>
+        function saveProject() {
+            var projectTitle = document.getElementById('projectTitle').value;
+            var projectDescription = document.getElementById('projectDescription').value;
+            var projectBudget = document.getElementById('projectBudget').value;
+            var projectTime = document.getElementById('projectTime').value;
+
+            alert('Proje kaydedildi!\nBaşlık: ' + projectTitle + '\nAçıklama: ' + projectDescription + '\nBütçe: ' + projectBudget + '\nZaman: ' + projectTime);
+        }
+    </script>
+
+</body>
+</html>

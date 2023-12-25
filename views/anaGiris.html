@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Tipi Belirleme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #f7eaea;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #000000;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .radio-group label {
+            margin: 0 10px;
+            color: #333;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 10%;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #selected-user-type {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        #submit-button {
+            font-size: 15px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kullanıcı Tipinizi Belirleyin</h1>
+        <form action="/selectUserType" method="post"> <!-- Form action'ı güncellendi -->
+            <div class="radio-group">
+                <input type="radio" id="customer" name="userType" value="customer">
+                <label for="customer">Müşteri</label>
+            
+                <input type="radio" id="jobseeker" name="userType" value="jobseeker">
+                <label for="jobseeker">İş Arayan</label>
+            </div>
+            <button type="submit" id="submit-button">Devam Et</button>
+        </form>
+        <p id="selected-user-type"></p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var submitButton = document.getElementById("submit-button");
+            var customerRadio = document.getElementById("customer");
+            var jobseekerRadio = document.getElementById('jobseeker');
+    
+            submitButton.addEventListener("click", function () {
+                if (customerRadio.checked) {
+                   
+                } else if (jobseekerRadio.checked) {
+                    
+                } else {
+                    alert("Kullanıcı tipi seçiniz!");
+                }
+            });
+    
+            customerRadio.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+    
+            jobseekerRadio.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

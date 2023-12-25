@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-dove"></i> Freelancer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Freelancerlara İş Verin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Çalışma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projelerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Yardım</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ara</button>
+                </form>
+                <div class="dropdown ms-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Para Birimi
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                        <li><a class="dropdown-item" href="#">TRY</a></li>
+                        <li><a class="dropdown-item" href="#">USD</a></li>
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-dark" style="width: 280px; background-color: #f8f9fa; height: 100vh;">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4"><a href="#">Projeler</a></span>
+        </a>
+        <hr>
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4"><a href="#">Freelancerlar</a></span>
+        </a>
+        <hr>
+        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="collapse" data-bs-target="#skillsCollapse" aria-expanded="false" aria-controls="skillsCollapse">
+            Beceriler
+        </button>
+        <div class="collapse" id="skillsCollapse">
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="javaCheckbox">
+                    <label class="form-check-label" for="javaCheckbox">
+                        Java
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="pythonCheckbox">
+                    <label class="form-check-label" for="pythonCheckbox">
+                        Python
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="javascriptCheckbox">
+                    <label class="form-check-label" for="javascriptCheckbox">
+                        JavaScript
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="javascriptCheckbox">
+                    <label class="form-check-label" for="javascriptCheckbox">
+                        C#
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="javascriptCheckbox">
+                    <label class="form-check-label" for="javascriptCheckbox">
+                        C
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="javascriptCheckbox">
+                    <label class="form-check-label" for="javascriptCheckbox">
+                        C++
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="javascriptCheckbox">
+                    <label class="form-check-label" for="javascriptCheckbox">
+                        SQL
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="mb-3">
+            <label for="priceRange" class="form-label">Fiyat Aralığı</label>
+            <input type="range" class="form-range" id="priceRange" min="0" max="100" step="10">
+        </div>
+        <div class="dropdown mt-auto">
+            <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                <li><a class="dropdown-item" href="#">Yeni proje...</a></li>
+                <li><a class="dropdown-item" href="#">Ayarlar</a></li>
+                <li><a class="dropdown-item" href="#">Profil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Çıkış Yap</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
